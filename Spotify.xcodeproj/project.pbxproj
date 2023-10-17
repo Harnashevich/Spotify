@@ -29,6 +29,7 @@
 		9F87D3C42ADEBBE700114289 /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87D3C32ADEBBE700114289 /* AudioTrack.swift */; };
 		9F87D3C62ADEBBFB00114289 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87D3C52ADEBBFB00114289 /* Artist.swift */; };
 		9F87D3C82ADEBC0B00114289 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87D3C72ADEBC0B00114289 /* UserProfile.swift */; };
+		9F87D3CB2ADECE1900114289 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F87D3CA2ADECE1900114289 /* UIView + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		9F87D3C32ADEBBE700114289 /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		9F87D3C52ADEBBFB00114289 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		9F87D3C72ADEBC0B00114289 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		9F87D3CA2ADECE1900114289 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		9F5E59AA2ADEA2C600237FA7 /* Spotify */ = {
 			isa = PBXGroup;
 			children = (
+				9F87D3C92ADECDDC00114289 /* Extensions */,
 				9F5E59C52ADEA41C00237FA7 /* Resources */,
 				9F5E59C42ADEA40300237FA7 /* Managers */,
 				9F5E59C32ADEA3F600237FA7 /* ViewModels */,
@@ -179,6 +182,14 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		9F87D3C92ADECDDC00114289 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F87D3CA2ADECE1900114289 /* UIView + Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,6 +267,7 @@
 				9F87D3B02ADEB85C00114289 /* WelcomeViewController.swift in Sources */,
 				9F87D3B42ADEB8A000114289 /* ProfileViewController.swift in Sources */,
 				9F87D3A42ADEB65800114289 /* TabBarViewController.swift in Sources */,
+				9F87D3CB2ADECE1900114289 /* UIView + Extensions.swift in Sources */,
 				9F87D3C02ADEBB7300114289 /* HapticsManager.swift in Sources */,
 				9F87D3C42ADEBBE700114289 /* AudioTrack.swift in Sources */,
 				9F5E59B02ADEA2C600237FA7 /* HomeViewController.swift in Sources */,
