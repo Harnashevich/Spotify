@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F42A6B12AE0329C008F1125 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42A6B02AE0329C008F1125 /* SettingsModels.swift */; };
 		9F4FFA6F2ADFC90B000F236B /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4FFA6E2ADFC90B000F236B /* AuthResponse.swift */; };
 		9F5E59AC2ADEA2C600237FA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E59AB2ADEA2C600237FA7 /* AppDelegate.swift */; };
 		9F5E59AE2ADEA2C600237FA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E59AD2ADEA2C600237FA7 /* SceneDelegate.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F42A6B02AE0329C008F1125 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
 		9F4FFA6E2ADFC90B000F236B /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		9F5E59A82ADEA2C600237FA7 /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F5E59AB2ADEA2C600237FA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				9F87D3C52ADEBBFB00114289 /* Artist.swift */,
 				9F87D3C72ADEBC0B00114289 /* UserProfile.swift */,
 				9F4FFA6E2ADFC90B000F236B /* AuthResponse.swift */,
+				9F42A6B02AE0329C008F1125 /* SettingsModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				9F87D3C82ADEBC0B00114289 /* UserProfile.swift in Sources */,
 				9F87D3A82ADEB77800114289 /* LibraryViewController.swift in Sources */,
 				9F87D3C62ADEBBFB00114289 /* Artist.swift in Sources */,
+				9F42A6B12AE0329C008F1125 /* SettingsModels.swift in Sources */,
 				9F87D3B82ADEB9E800114289 /* PlaylistViewController.swift in Sources */,
 				9F5E59AE2ADEA2C600237FA7 /* SceneDelegate.swift in Sources */,
 				9F87D3B62ADEB9CD00114289 /* PlayerViewController.swift in Sources */,
