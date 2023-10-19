@@ -5,7 +5,6 @@
 //  Created by Andrei Harnashevich on 17.10.23.
 //
 
-
 import SDWebImage
 import UIKit
 
@@ -25,7 +24,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         title = "Profile"
         view.backgroundColor = .systemBackground
-        view.addSubviews(tableView )
+        view.addSubviews(tableView)
         tableView.dataSource = self
         tableView.delegate = self
         fetchProfile()
@@ -99,6 +98,7 @@ class ProfileViewController: UIViewController {
 }
 
 extension ProfileViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
@@ -109,8 +109,6 @@ extension ProfileViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
-    
-    
 }
 
 extension ProfileViewController: UITableViewDelegate {
