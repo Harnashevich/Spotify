@@ -56,9 +56,7 @@ class SettingsViewController: UIViewController {
         navigationController?.pushViewController(vc, animated:true)
     }
     
-    private func singOutTapped() {
-        
-    }
+    private func singOutTapped() {}
 }
 
 extension SettingsViewController: UITableViewDataSource {

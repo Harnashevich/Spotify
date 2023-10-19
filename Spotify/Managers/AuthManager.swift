@@ -57,7 +57,7 @@ final class AuthManager {
         code: String,
         completion: @escaping ((Bool) -> Void)
     ) {
-        // Get tok en
+        // Get token
         guard let url = URL(string: Constants.tokenAPIURL) else {
             return
         }
