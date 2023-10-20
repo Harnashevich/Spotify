@@ -47,7 +47,6 @@ class ProfileViewController: UIViewController {
                     self.failedToGetProfile()
                 }
             }
-            
         }
     }
     
