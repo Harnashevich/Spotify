@@ -109,7 +109,3 @@ extension ProfileViewController: UITableViewDataSource {
         return cell
     }
 }
-
-extension ProfileViewController: UITableViewDelegate {
-    
-}
