@@ -8,7 +8,7 @@
 import SDWebImage
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate {
     
     private let tableView: UITableView = {
         let tableView = UITableView()
