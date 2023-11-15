@@ -101,6 +101,24 @@ class PlaylistViewController: UIViewController {
                 }
             }
         }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .action,
+            target: self,
+            action: #selector(didTapShare)
+        )
+    }
+    
+    @objc private func didTapShare() {
+        guard let url = URL(string: playlist.external_urls["spotify"] ?? "") else {
+            return
+        }
+        let vc = UIActivityViewController(
+            activityItems: [url],
+            applicationActivities: []
+        )
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
     
     override func viewDidLayoutSubviews() {
@@ -150,6 +168,23 @@ extension PlaylistViewController: UICollectionViewDelegate {
             return UICollectionReusableView()
         }
         
+        let headerViewModel = PlaylistHeaderViewViewModel(
+            name: playlist.name,
+            ownerName: playlist.owner.display_name,
+            description: playlist.description,
+            artworkURL: URL(string: playlist.images.first?.url ?? "")
+        )
+        
+        header.conigure(with: headerViewModel)
+        header.delegate = self
         return header
+    }
+}
+
+extension PlaylistViewController: PlaylistHeaderCollecionReusableViewDelegate {
+    
+    func playlistHeaderCollecionReusableViewDidTapPlayAll(_ header: PlaylistHeaderCollecionReusableView) {
+        // Statr play
+        print("play")
     }
 }
