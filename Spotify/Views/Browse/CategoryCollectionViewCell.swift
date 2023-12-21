@@ -1,15 +1,16 @@
 //
-//  GenreCollectionViewCell.swift
+//  CategoryCollectionViewCell.swift
 //  Spotify
 //
 //  Created by Andrei Harnashevich on 7.12.23.
 //
 
 import UIKit
+import SDWebImage
 
-class GenreCollectionViewCell: UICollectionViewCell {
+class CategoryCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "GenreCollectionViewCell"
+    static let identifier = "CategoryCollectionViewCell"
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -61,10 +62,15 @@ class GenreCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         label.text = nil
+        imageView.image = UIImage(
+            systemName: "music.quarternote.3",
+            withConfiguration: UIImage.SymbolConfiguration(pointSize: 50, weight: .regular)
+        )
     }
     
-    func configure(with text: String) {
-        label.text = text
+    func configure(with viewModel: CategoryCollectionViewCellViewModel) {
+        label.text = viewModel.title
+        imageView.sd_setImage(with: viewModel.artworkURL)
 //        imageView.sd_setImage(with: viewModel.artworkURL, completed: nil)
         contentView.backgroundColor = colors.randomElement()
     }

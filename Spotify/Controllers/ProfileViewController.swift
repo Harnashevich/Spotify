@@ -93,7 +93,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate {
         view.addSubview(label)
         label.center = view.center
     }
-    
 }
 
 extension ProfileViewController: UITableViewDataSource {
