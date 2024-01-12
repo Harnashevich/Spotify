@@ -58,6 +58,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         view.addSubviews(collectionView)
         navigationItem.searchController = searchController
         collectionView.register(
@@ -87,17 +88,7 @@ class SearchViewController: UIViewController, UISearchResultsUpdating {
     }
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard
-            let resultController = searchController.searchResultsController as? SearchResultsViewController,
-            let query = searchController.searchBar.text,
-            !query.trimmingCharacters(in: .whitespaces).isEmpty 
-        else {
-            return
-        }
-        // resultsController.update(with: results)
-        print(query)
-        
-        // Perfofm search
+      
     }
 }
 
@@ -133,5 +124,56 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
             let vc = CategoryViewController(category: category)
             vc.navigationItem.largeTitleDisplayMode = .never
             navigationController?.pushViewController(vc, animated: true)
+        }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard
+            let resultController = searchController.searchResultsController as? SearchResultsViewController,
+            let query = searchBar.text,
+            !query.trimmingCharacters(in: .whitespaces).isEmpty
+        else {
+            return
+        }
+        
+        resultController.delegate = self
+        
+        APICaller.shared.search(with: query) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let result):
+                    print(result)
+                    resultController.update(with: result)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+        }
+        // resultsController.update(with: results)
+        print(query)
+        
+        // Perfofm search
+    }
+}
+
+extension SearchViewController: SearchResultsViewControllerDelegate {
+    
+    func didTapResult(_ result: SearchResult) {
+            switch result {
+            case .artist(let model):
+                break
+            case .album(let model):
+                let vc = AlbumViewController(album: model)
+                vc.navigationItem.largeTitleDisplayMode = .never
+                navigationController?.pushViewController(vc, animated: true)
+            case .track(let model):
+                break
+            case .playlist(let model):
+                let vc = PlaylistViewController(playlist: model)
+                vc.navigationItem.largeTitleDisplayMode = .never
+                navigationController?.pushViewController(vc, animated: true)
+            }
         }
 }
