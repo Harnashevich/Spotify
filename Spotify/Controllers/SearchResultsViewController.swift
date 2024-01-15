@@ -25,14 +25,14 @@ class SearchResultsViewController: UIViewController {
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .systemBackground
-//        tableView.register(
-//            SearchResultDefaultTableViewCell.self,
-//            forCellReuseIdentifier: SearchResultDefaultTableViewCell.identfier
-//        )
-//        tableView.register(
-//            SearchResultSubtitleTableViewCell.self,
-//            forCellReuseIdentifier: SearchResultSubtitleTableViewCell.identfier
-//        )
+        tableView.register(
+            SearchResultDefaultTableViewCell.self,
+            forCellReuseIdentifier: SearchResultDefaultTableViewCell.identfier
+        )
+        tableView.register(
+            SearchResultSubtitleTableViewCell.self,
+            forCellReuseIdentifier: SearchResultSubtitleTableViewCell.identfier
+        )
         tableView.register(
             UITableViewCell.self,
             forCellReuseIdentifier: "cell"
@@ -110,16 +110,62 @@ extension SearchResultsViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         switch result {
-        case .artist(let model):
-            cell.textLabel?.text = model.name
-        case .album(let model):
-            cell.textLabel?.text = model.name
-        case .track(let model):
-            cell.textLabel?.text = model.name
-        case .playlist(let model):
-            cell.textLabel?.text = model.name
+        case .artist(let artist):
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SearchResultDefaultTableViewCell.identfier,
+                for: indexPath
+            ) as? SearchResultDefaultTableViewCell else {
+                return  UITableViewCell()
+            }
+            let viewModel = SearchResultDefaultTableViewCellViewModel(
+                title: artist.name,
+                imageURL: URL(string: artist.images?.first?.url ?? "")
+            )
+            cell.configure(with: viewModel)
+            return cell
+        case .album(let album):
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SearchResultSubtitleTableViewCell.identfier,
+                for: indexPath
+            ) as? SearchResultSubtitleTableViewCell else {
+                return  UITableViewCell()
+            }
+            let viewModel = SearchResultSubtitleTableViewCellViewModel(
+                title: album.name,
+                subtitle: album.artists.first?.name ?? "",
+                imageURL: URL(string: album.images.first?.url ?? "")
+            )
+            cell.configure(with: viewModel)
+            return cell
+        case .track(let track):
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SearchResultSubtitleTableViewCell.identfier,
+                for: indexPath
+            ) as? SearchResultSubtitleTableViewCell else {
+                return  UITableViewCell()
+            }
+            let viewModel = SearchResultSubtitleTableViewCellViewModel(
+                title: track.name,
+                subtitle: track.artists.first?.name ?? "-",
+                imageURL: URL(string: track.album?.images.first?.url ?? "")
+            )
+            cell.configure(with: viewModel)
+            return cell
+        case .playlist(let playlist):
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: SearchResultSubtitleTableViewCell.identfier,
+                for: indexPath
+            ) as? SearchResultSubtitleTableViewCell else {
+                return  UITableViewCell()
+            }
+            let viewModel = SearchResultSubtitleTableViewCellViewModel(
+                title: playlist.name,
+                subtitle: playlist.owner.display_name,
+                imageURL: URL(string: playlist.images.first?.url ?? "")
+            )
+            cell.configure(with: viewModel)
+            return cell
         }
-        return cell
     }
 }
 
