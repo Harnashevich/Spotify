@@ -13,7 +13,7 @@ protocol PlayerControlsViewDelegate: AnyObject {
     func playerControlsViewDidTapBackwardsButton(_ playerControlsView: PlayerControlsView)
     func playerControlsView(_ playerControlsView: PlayerControlsView, didSlideSlider value: Float)
 }
- 
+
 struct PlayerControlsViewViewModel {
     let title: String?
     let subtitle: String?
@@ -124,6 +124,7 @@ final class PlayerControlsView: UIView {
         super.layoutSubviews()
         nameLabel.frame = CGRect(x: 0, y: 0, width: width, height: 50)
         subtitleLabel.frame = CGRect(x: 0, y: nameLabel.bottom+10, width: width, height: 50)
+
         volumeSlider.frame = CGRect(x: 10, y: subtitleLabel.bottom+20, width: width-20, height: 44)
 
         let buttonSize: CGFloat = 60
