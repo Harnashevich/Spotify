@@ -72,7 +72,7 @@ class LibraryViewController: UIViewController {
     }
     
     @objc private func didTapAdd() {
-//        playlistsVC.showCreatePlaylistAlert()
+        playlistsVC.showCreatePlaylistAlert()
     }
 }
 
