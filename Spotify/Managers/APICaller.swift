@@ -145,9 +145,7 @@ final class APICaller {
            ) { baseRequest in
                var request = baseRequest
                let json = [
-                   "uris": [
-                       "spotify:track:\(track.id)"
-                   ]
+                   "uris": ["spotify:track:\(track.id)"]
                ]
                print(json)
                request.httpBody = try? JSONSerialization.data(withJSONObject: json, options: .fragmentsAllowed)

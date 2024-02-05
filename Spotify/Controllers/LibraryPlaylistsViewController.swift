@@ -46,7 +46,7 @@ class LibraryPlaylistsViewController: UIViewController {
        }
     
     @objc func didTapClose() {
-            dismiss(animated: true, completion: nil)
+            dismiss(animated: true)
         }
     
     private func fetchData() {
