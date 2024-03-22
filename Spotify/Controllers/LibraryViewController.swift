@@ -76,7 +76,6 @@ class LibraryViewController: UIViewController {
     }
 }
 
-
 extension LibraryViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
