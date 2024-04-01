@@ -1,6 +1,6 @@
 # Spotify
 
-Music and audio app on iOS. Complete with the official Spotify API, playback, search functionality.
+Music and audio application on iOS. Complete with the official Spotify API, playback, search functionality.
 
 Technology stack:
 
