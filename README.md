@@ -1,4 +1,4 @@
-# Spotify
+# Spotify ![logo](https://github.com/Harnashevich/Spotify/assets/84876109/cd2fd72b-7386-4cbf-ac9d-21601462fb0c)
 
 Music and audio application on iOS. Complete with the official Spotify API, playback, search functionality.
 
