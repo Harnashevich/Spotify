@@ -1,4 +1,4 @@
-# Spotify /Users/harnashevich/Desktop/logo.png
+# Spotify
 
 Music and audio application on iOS. Complete with the official Spotify API, playback, search functionality.
 
