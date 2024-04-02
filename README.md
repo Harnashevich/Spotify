@@ -1,5 +1,4 @@
-# Spotify
-<img src="https://github.com/Harnashevich/Spotify/assets/84876109/51c3b8b7-11e2-4fed-aafe-74def9c0c206" width="100" height="100">
+<img src="https://github.com/Harnashevich/Spotify/assets/84876109/51c3b8b7-11e2-4fed-aafe-74def9c0c206" width="100" height="100"> # Spotify
 
 Music and audio application on iOS. Complete with the official Spotify API, playback, search functionality.
 
