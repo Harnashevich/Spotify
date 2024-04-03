@@ -3,7 +3,17 @@
 Music and audio application on iOS. Complete with the official Spotify API, playback, search functionality.<br />
 The project is based on the iOS Academy course.
 
-Technology stack:
+## Features
+
+• Playlist сreation<br />
+• Browse & Recommended<br />
+• Search songs, albums, artists<br />
+• Save albums<br />
+• User profile<br />
+• Browse categories<br />
+• Sign In/Sign Out<br />
+
+## Technology stack:
 
 • UIKit (programmatically)<br />
 • MVVM architecture<br />
