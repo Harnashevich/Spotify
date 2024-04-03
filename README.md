@@ -6,10 +6,10 @@ The project is based on the iOS Academy course.
 ## Features
 
 • Playlist сreation<br />
-• Browse & Recommended<br />
+• Browse and recommended<br />
 • Search songs, albums, artists<br />
 • Save albums<br />
-• Playback and Playlists Playback<br />
+• Playback and playlists playback<br />
 • User profile<br />
 • Browse categories<br />
 • Sign In/Sign Out<br />
