@@ -1,6 +1,6 @@
 # Spotify <img src="https://github.com/Harnashevich/Spotify/assets/84876109/51c3b8b7-11e2-4fed-aafe-74def9c0c206" width="30" height="30">
 
-Music and audio application on iOS. Complete with the official Spotify API, playback, search functionality.<br />
+Music and audio application on iOS. Complete with the official Spotify API.<br />
 The project is based on the iOS Academy course.
 
 ## Features
