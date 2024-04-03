@@ -14,7 +14,7 @@ The project is based on the iOS Academy course.
 • Browse categories<br />
 • Sign In/Sign Out<br />
 
-## Technology stack:
+## Technology stack
 
 • UIKit (programmatically)<br />
 • MVVM architecture<br />
